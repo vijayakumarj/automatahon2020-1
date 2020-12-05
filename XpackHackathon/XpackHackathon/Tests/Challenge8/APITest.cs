@@ -12,6 +12,11 @@ namespace XpackHackathon.Tests.Challenge8
     [TestFixture]
     public class APITest : ApiTestBase
     {
+        /// <summary>
+        /// It covers the adding and deleting the API to test if it's inserted and deleted properly
+        /// </summary>
+        /// <param name="company"></param>
+        /// <returns></returns>
         [Test]
         [TestCaseSource("GetData")]
         [Category("Challenge8")]
@@ -34,6 +39,11 @@ namespace XpackHackathon.Tests.Challenge8
             }
         }
 
+        /// <summary>
+        /// To Verify Updating Company and asserting the change
+        /// </summary>
+        /// <param name="company"></param>
+        /// <returns></returns>
         [Test]
         [TestCaseSource("GetData")]
         [Category("Challenge8")]

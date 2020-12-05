@@ -4,6 +4,9 @@ using System;
 
 namespace XpackHackathon.Utils.Helpers
 {
+    /// <summary>
+    /// Userd to Report the Assertions as a wrapper to Assert class
+    /// </summary>
     public class ReportAssert
     {
         public static void AreEqual(object expectedValue, object actualValue, string assertionDetails)
