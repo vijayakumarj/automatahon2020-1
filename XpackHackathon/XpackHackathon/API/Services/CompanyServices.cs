@@ -28,7 +28,7 @@ namespace XpackHackathon.API.Services
             newCompany.Add("tel", company.Tel.TrimEnd());
             newCompany.Add("email", company.Email.TrimEnd());
 
-            var companyString = JsonConvert.SerializeObject(newCompany, Formatting.None);
+            var companyString = JsonConvert.SerializeObject(newCompany, Formatting.Indented);
             var formValues = new StringContent(companyString);
             var response = await Post($"{BaseUri}/companies/", formValues, "Company");
             var responseAsString = await response.Content.ReadAsStringAsync();

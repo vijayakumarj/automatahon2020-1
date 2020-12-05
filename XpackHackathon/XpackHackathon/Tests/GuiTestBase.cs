@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -26,23 +27,39 @@ namespace XpackHackathon.Tests
         {
             var currentTestContext = TestContext.CurrentContext;
             Resources.Report.StartTest($"{currentTestContext.Test.MethodName}");
-            IWebDriver driver = new ChromeDriver();
-            driver.Navigate()
-                .GoToUrl(currentTestContext.Test.Properties["GuiUrlChallenge2"].ToString());
-            driver.Manage().Window.Maximize();
-            driver.Quit();
+            WebDriver = new ChromeDriver();
+            WebDriver.Navigate()
+                .GoToUrl("https://automatahon20.cpsatexam.org/challenge3/");
+            WebDriver.Manage().Window.Maximize();
         }
 
         [TearDown]
         public void TearDown()
         {
-
+            WebDriver.Quit();
+            var currentTestContext = TestContext.CurrentContext;
+            var result = currentTestContext.Result.Outcome.Status;
+            switch (result)
+            {
+                case TestStatus.Failed:
+                    Assert.IsTrue(false, "failed");
+                    break;
+                case TestStatus.Inconclusive:
+                    Assert.IsTrue(false, "inconclusive");
+                    break;
+                case TestStatus.Skipped:
+                    Assert.IsTrue(false, "Skipped");
+                    break;
+                default:
+                    Assert.IsTrue(true, "passed");
+                    break;
+            }
         }
 
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
-
+            Resources.Report.EndReport();
         }
     }
 }

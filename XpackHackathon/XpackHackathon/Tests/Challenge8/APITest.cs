@@ -21,7 +21,6 @@ namespace XpackHackathon.Tests.Challenge8
             {
                 //morphing the static data
                 company.Name = company.Name + RandomHelper.Generate();
-                company.Email = company.Email+ RandomHelper.Generate();
                 CompanyServices companyServices = new CompanyServices();
                 List<Company> companies = new List<Company>();
                 companies = await companyServices.PostCompany(company, System.Net.HttpStatusCode.OK);
