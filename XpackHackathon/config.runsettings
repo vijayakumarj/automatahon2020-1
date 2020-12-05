@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+
+  <!-- Parameters used by tests at runtime -->
+  <TestRunParameters>
+    <Parameter name="TestInputDataPath" value="D:\Git\UIAutomation\Framework\TestInputData" />
+    <Parameter name="BaseUrl" value="https://designers.rec1.com" />
+    <Parameter name="SsoLogin" value="true" />
+    <Parameter name="UseGrid" value="false" />
+    <Parameter name="EnabledBrowsers" value="Chrome" />
+    <Parameter name="DbUser" value="abhatia" />
+    <Parameter name="DbPassword" value="arjunzoey" />
+    <Parameter name="TestSiteDbSource" value="qarec-001.civicplus.local" />
+    <Parameter name="TestSiteDbName" value="rec1" />
+  </TestRunParameters>
+
+  <!-- Adapter Specific sections -->
+  <NUnit>
+    <NumberOfTestWorkers>4</NumberOfTestWorkers>
+  </NUnit>
+
+</RunSettings>
