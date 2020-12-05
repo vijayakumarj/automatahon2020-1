@@ -37,6 +37,7 @@ namespace XpackHackathon.Tests.Challenge8
 
         [Test]
         [TestCaseSource("GetData")]
+        [Category("Challenge8")]
         public async Task ApiTestChallege8PostAndUpdate(Company company)
         {
             try
