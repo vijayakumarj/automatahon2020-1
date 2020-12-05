@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,7 +16,7 @@ namespace XpackHackathon.Tests
         public TestContext TestContext { get; set; }
 
         [OneTimeSetUp]
-        public void OneTimeSetup()
+        public static void OneTimeSetup()
         {
             Resources.InitializeReport();
         }
@@ -23,7 +24,13 @@ namespace XpackHackathon.Tests
         [SetUp]
         public void SetUp()
         {
-            Resources.Report.StartTest($"{TestContext.Test.MethodName}");
+            var currentTestContext = TestContext.CurrentContext;
+            Resources.Report.StartTest($"{currentTestContext.Test.MethodName}");
+            IWebDriver driver = new ChromeDriver();
+            driver.Navigate()
+                .GoToUrl(currentTestContext.Test.Properties["GuiUrlChallenge2"].ToString());
+            driver.Manage().Window.Maximize();
+            driver.Quit();
         }
 
         [TearDown]

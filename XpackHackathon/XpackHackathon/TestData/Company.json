@@ -1,0 +1,29 @@
+{
+  "Companies": [
+    {
+      "name": "BlueConchTechnologies, Pune",
+      "tel": "012-345-6789",
+      "email": "gtr@bct.org"
+    },
+    {
+      "name": "Xpanxion International Pvt Ltd",
+      "tel": "012-345-6789",
+      "email": "gtr@xpanxion.org"
+    },
+    {
+      "name": "UST-Global Inc",
+      "tel": "012-345-6789",
+      "email": "gtr@ust-global.org"
+    },
+    {
+      "name": "SunTec Inc",
+      "tel": "012-345-6789",
+      "email": "gtr@suntec.org"
+    },
+    {
+      "name": "SudoBoat Inc",
+      "tel": "012-345-6789",
+      "email": "gtr@sudoboat.org"
+    }
+  ]
+}

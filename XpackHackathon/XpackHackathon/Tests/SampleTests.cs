@@ -33,11 +33,7 @@ namespace XpackHackathon.Tests
         {
             try
             {
-                Address address = new Address();
-                SampleServices sampleServices = new SampleServices();
-                address = await sampleServices.GetAddress("654654", "656", System.Net.HttpStatusCode.OK);
-
-                ReportAssert
+                
             }
             catch
             {

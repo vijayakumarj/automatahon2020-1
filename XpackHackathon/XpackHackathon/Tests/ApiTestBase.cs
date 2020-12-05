@@ -51,7 +51,7 @@ namespace XpackHackathon.Tests
         {
             var currentTestContext = TestContext.CurrentContext;
             Resources.Report.StartTest($"{currentTestContext.Test.MethodName}");
-            BaseUrl = currentTestContext.Test.Properties["ApiBaseUri"].ToString();
+            BaseUrl = "http://34.68.51.180:4000/api/v1";
         }
         
         public static void LaunchReport()

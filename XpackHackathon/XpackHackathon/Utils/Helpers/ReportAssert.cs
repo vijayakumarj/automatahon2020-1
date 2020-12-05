@@ -16,7 +16,7 @@ namespace XpackHackathon.Utils.Helpers
             catch (Exception e)
             {
                 Resources.Report.Log(Status.Fail, $"Checking '{assertionDetails}'");
-                Assert.Fail($"Checking : {assertionDetails}: Failed");
+                Assert.Fail($"Checking : {assertionDetails}: Failed" + e.Message);
             }
         }
         public static void IsTrue(bool expression, string expressionDetails)

@@ -3,7 +3,10 @@
 
   <!-- Parameters used by tests at runtime -->
   <TestRunParameters>
-    <Parameter name="BaseUri" value="https://designers.rec1.com" />
+    <Parameter name="GuiUrlChallenge2" value="https://automatahon20.cpsatexam.org/challenge2/" />
+    <Parameter name="GuiUrlChallenge1" value="https://automatahon20.cpsatexam.org/challenge1/" />
+    <Parameter name="GuiUrlChallenge3" value="https://automatahon20.cpsatexam.org/challenge3/" />
+    <Parameter name="ApiUrlChallenge8" value="http://34.68.51.180:4000/" />
     <Parameter name="Browser" value="Chrome" />
   </TestRunParameters>
 
